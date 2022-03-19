@@ -7,6 +7,7 @@ import Nav from "react-bootstrap/Nav";
 import { mainBody, repos, about, skills } from "../editable-stuff/config.js";
 
 const Navigation = React.forwardRef((props, ref) => {
+  console.log(process.env.PUBLIC_URL)
   // const { showBlog, FirstName } = config;
   const [isTop, setIsTop] = useState(true);
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -45,6 +46,7 @@ const Navigation = React.forwardRef((props, ref) => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" className="toggler" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
+        {/* TODO: Add the nextjs blog. that was hosted */}
           {/* {
             <Nav.Link className="nav-link lead">
               <Link to={process.env.PUBLIC_URL + "/blog"}>Blog</Link>
